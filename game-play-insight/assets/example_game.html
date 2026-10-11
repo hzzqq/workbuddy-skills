@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>反应点击 · 示例小游戏（已接入 GameTelemetry）</title>
+<style>
+  body { font-family: system-ui, "Microsoft YaHei", sans-serif; background:#0f1115; color:#e6e6e6; margin:0;
+         display:flex; flex-direction:column; align-items:center }
+  #hud { display:flex; gap:24px; padding:12px; font-size:15px }
+  #hud b { color:#4fd1ff }
+  #stage { position:relative; width:800px; height:400px; background:#1a1d24; border-radius:12px;
+           overflow:hidden; cursor:crosshair }
+  .target { position:absolute; width:54px; height:54px; border-radius:50%;
+             background:radial-gradient(circle at 30% 30%, #ffd86b, #ff7a59);
+             box-shadow:0 0 18px #ff7a5980; cursor:pointer }
+  #msg { padding:10px; color:#9aa0a6 }
+  button { background:#4fd1ff; color:#08121a; border:0; padding:8px 16px; border-radius:8px;
+           font-size:14px; cursor:pointer; margin:6px }
+</style>
+</head>
+<body>
+  <h2>反应点击 · 示例小游戏</h2>
+  <div id="hud">
+    <div>关卡 <b id="lv">1</b>/3</div>
+    <div>得分 <b id="sc">0</b></div>
+    <div>剩余 <b id="tm">10</b>s</div>
+  </div>
+  <div id="stage"></div>
+  <div id="msg">点中移动的圆点。每关限时，达标即过关，否则失败。</div>
+  <div>
+    <button onclick="Game.start()">开始 / 重玩</button>
+    <button onclick="Game.peek()">查看数据去向</button>
+  </div>
+
+  <!-- 1) 引入 SDK -->
+  <script src="telemetry_client.js"></script>
+  <script>
+    // 2) 初始化（自动采集 session/报错/可见性）
+    GameTelemetry.init({ gameId: 'example-clicker', collectorUrl: 'http://localhost:8765' });
+
+    const stage = document.getElementById('stage');
+    const elLv = document.getElementById('lv'), elSc = document.getElementById('sc'),
+          elTm = document.getElementById('tm'), elMsg = document.getElementById('msg');
+
+    const Game = {
+      lv: 1, score: 0, timeLeft: 10, timer: null, spawner: null, need: 6,
+      start() { this.lv = 1; this.score = 0; this.startLevel(); },
+      startLevel() {
+        clearInterval(this.timer); clearInterval(this.spawner);
+        this.timeLeft = 10; this.need = [6, 8, 10][this.lv - 1] || 10;
+        elLv.textContent = this.lv; elSc.textContent = this.score; elTm.textContent = this.timeLeft;
+        elMsg.textContent = `第 ${this.lv} 关：限时内点中 ${this.need} 个`;
+        GameTelemetry.track('level_start', { level: this.lv });   // 3) 手动埋点
+        this.spawn();
+        this.spawner = setInterval(() => this.spawn(), 700);
+        this.timer = setInterval(() => {
+          this.timeLeft--; elTm.textContent = this.timeLeft;
+          if (this.timeLeft <= 0) this.endLevel();
+        }, 1000);
+      },
+      spawn() {
+        const t = document.createElement('div'); t.className = 'target';
+        const x = Math.random() * (800 - 54), y = Math.random() * (400 - 54);
+        t.style.left = x + 'px'; t.style.top = y + 'px';
+        const self = this;
+        t.onclick = () => { self.score++; elSc.textContent = self.score; t.remove();
+          if (self.score >= self.need) self.endLevel(); };
+        stage.appendChild(t);
+        setTimeout(() => { if (t.parentElement) t.remove(); }, 1200);
+      },
+      endLevel() {
+        clearInterval(this.timer); clearInterval(this.spawner); stage.innerHTML = '';
+        if (this.score >= this.need) {
+          const tsec = 10 - this.timeLeft;
+          GameTelemetry.track('level_complete', { level: this.lv, timeSec: tsec, score: this.score });
+          if (this.lv >= 3) { elMsg.textContent = '🏆 全部通关！'; GameTelemetry.track('game_clear', {}); return; }
+          this.lv++; this.score = 0; setTimeout(() => this.startLevel(), 800);
+        } else {
+          GameTelemetry.track('level_fail', { level: this.lv, reason: 'timeout', score: this.score, need: this.need });
+          elMsg.textContent = `第 ${this.lv} 关失败（只点中 ${this.score}/${this.need}）`;
+        }
+      },
+      peek() { elMsg.textContent = '事件已通过 GameTelemetry 上报到 http://localhost:8765（本地 collector 写盘）'; }
+    };
+  </script>
+</body>
+</html>
