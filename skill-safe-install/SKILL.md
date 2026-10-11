@@ -1,5 +1,5 @@
 ---
-name: skill-safe-install
+name: Skill 安全安装
 description: |
   带校验和（sha256）与外部安全审查的 skill 安装/卸载工具。用于"引入外部 skill"时：
   先对安装包做 P0/P1/P2 安全审计（destructive 命令、外发数据、密钥读取、提权等），

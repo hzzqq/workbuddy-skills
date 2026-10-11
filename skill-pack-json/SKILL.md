@@ -1,5 +1,5 @@
 ---
-name: skill-pack-json
+name: Skill 打包器
 description: |
   将本机已安装的 skill（用户级 ~/.workbuddy/skills/<name>/ 或项目级 .workbuddy/skills/<name>/）
   完整打包成单个 JSON 文件：含解析后的 frontmatter、逐文件内容、每文件 sha256、整包 manifest 校验和，

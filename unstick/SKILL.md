@@ -1,5 +1,5 @@
 ---
-name: unstick
+name: 任务解卡器
 description: >-
   WorkBuddy 任务解卡器 / 刷新器。当 WorkBuddy 跑任务"卡住不动、不干活、进度停滞、
   派活了却没反应"时，一键诊断并清理头号元凶——孤儿锁（agent 已死但 .drive_lock 残留，

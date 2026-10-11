@@ -1,5 +1,5 @@
 ---
-name: game-play-insight
+name: 游戏数据洞察
 description: 网页小游戏游玩数据收集与反馈闭环 skill。自动采集玩家行为（浏览器埋点 SDK + 本地收集服务），汇总成结构化洞察报告，并生成可直接交给「开发游戏的 AI（Hy3 / WorkBuddy）」的改良指令包。触发词：收集游玩数据、生成玩家反馈报告、把数据发给开发AI、改进游戏、游戏数据洞察。
 agent_created: true
 slug: game-play-insight

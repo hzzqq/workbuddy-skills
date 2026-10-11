@@ -1,5 +1,5 @@
 ---
-name: dev-supervisor
+name: 自驱进度监控
 description: |
   监督所有 self-driving-dev 自驱项目的开发进度：只读各项目 .workbuddy/self-driving/state.json，
   输出终端 ASCII 进度条 + 本地看板（底部实时进度条），不干扰 AI 干活。
