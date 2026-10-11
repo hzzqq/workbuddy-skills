@@ -9,7 +9,7 @@ description: |
 agent_created: true
 slug: skill-safe-install
 version: 1.0.0
-displayName: skill-safe-install
+displayName: Skill 安全安装
 ---
 
 # Skill 安全安装/卸载器（skill-safe-install）

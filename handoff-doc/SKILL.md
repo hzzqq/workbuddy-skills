@@ -8,7 +8,7 @@ description: |
 agent_created: true
 slug: handoff-doc
 version: 1.0.0
-displayName: handoff-doc
+displayName: 交接文档
 ---
 
 # 对话精华提炼 → 交接文档（Handoff Doc）

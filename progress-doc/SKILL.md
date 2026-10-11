@@ -3,7 +3,7 @@ name: progress-doc
 description: 用「进度文档」代替「长会话」。为每个任务/领域维护一份本地磁盘 Markdown 进度文档，新会话只需说「先读进度文档」即可轻量恢复上下文；支持 update 实时增量写回，做到删 WorkBuddy 空间/会话也不丢项目上下文。触发词：进度文档、先读进度文档、读进度文档、开个进度文档、更新进度文档、增量更新进度、实时写回进度、收尾写回、progress doc、恢复上下文、任务文档、续上、接上次、删空间不丢上下文。
 slug: progress-doc
 version: 1.0.0
-displayName: progress-doc
+displayName: 进度文档
 ---
 
 # progress-doc · 进度文档代替长会话

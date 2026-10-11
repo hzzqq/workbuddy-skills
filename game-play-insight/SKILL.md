@@ -4,7 +4,7 @@ description: 网页小游戏游玩数据收集与反馈闭环 skill。自动采�
 agent_created: true
 slug: game-play-insight
 version: 1.0.0
-displayName: game-play-insight
+displayName: 游戏数据洞察
 ---
 
 # game-play-insight — 网页小游戏游玩数据收集与反馈闭环

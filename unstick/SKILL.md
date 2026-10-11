@@ -10,7 +10,7 @@ description: >-
 agent_created: true
 slug: unstick
 version: 1.0.0
-displayName: unstick
+displayName: 任务解卡器
 ---
 
 # unstick · WorkBuddy 任务解卡器

@@ -13,7 +13,7 @@ description: |
 agent_created: true
 slug: self-driving-dev
 version: 1.0.0
-displayName: self-driving-dev
+displayName: 自驱开发循环
 ---
 
 # 自主驱动开发循环（Self-Driving Dev Loop）

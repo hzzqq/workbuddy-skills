@@ -8,7 +8,7 @@ description: |
 agent_created: true
 slug: dev-supervisor
 version: 1.0.0
-displayName: dev-supervisor
+displayName: 自驱进度监控
 ---
 
 # dev-supervisor · AI 开发进度监督

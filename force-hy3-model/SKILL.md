@@ -8,7 +8,7 @@ description: |
 agent_created: true
 slug: force-hy3-model
 version: 1.0.0
-displayName: force-hy3-model
+displayName: Hy3 模型强制器
 ---
 
 # 强制 Hy3 模型（force-hy3-model）

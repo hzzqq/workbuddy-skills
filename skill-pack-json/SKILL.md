@@ -8,7 +8,7 @@ description: |
 agent_created: true
 slug: skill-pack-json
 version: 1.0.0
-displayName: skill-pack-json
+displayName: Skill 打包器
 ---
 
 # Skill → JSON 打包器（skill-pack-json）
