@@ -1,0 +1,56 @@
+{
+  "bundle": "prompt-humanizer-pack",
+  "version": "1.0.0",
+  "members": [
+    {
+      "dir": "prompt-discipline",
+      "displayName": "prompt-discipline",
+      "description": "结构化 prompt 训练与自查。当用户要写提示词、抱怨 AI 干活慢/跑偏/结果差、想训练\"把模糊需求翻译成机器指令\"的方法论、需要 pr",
+      "source": "local",
+      "namespace": "",
+      "slug": "prompt-discipline",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\prompt-discipline"
+    },
+    {
+      "dir": "prompt-master",
+      "displayName": "提示词大神",
+      "description": "一键铸造天花板级提示词。说出需求或目标，即深度挖掘真实意图，产出五层架构完整、自带100分制评分门禁、可直接投喂任意大模型的大神级提示词。当",
+      "source": "local",
+      "namespace": "",
+      "slug": "prompt-master",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\prompt-master"
+    },
+    {
+      "dir": "humanizer-zh-pro__skillhub",
+      "displayName": "中文 AI 去痕工具",
+      "description": "中文 AI 文本去痕 Skill。诊断并修复 24 种 AI 写作痕迹，按「为什么 AI 会这样」的 6 组病因组织， 附可直接运行的零依赖",
+      "source": "local",
+      "namespace": "",
+      "slug": "humanizer-zh-pro__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\humanizer-zh-pro__skillhub"
+    },
+    {
+      "dir": "unclecheng-reduce-ai-perception__skillhub",
+      "displayName": "humanizer",
+      "description": "去除文本中的AI写作痕迹，让文字读起来更像人类写作。当用户要求'去AI味'、'降AI味'、'让回复更像人话'、'润色'、'改写得更自然'时使",
+      "source": "local",
+      "namespace": "",
+      "slug": "unclecheng-reduce-ai-perception__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\unclecheng-reduce-ai-perception__skillhub"
+    },
+    {
+      "dir": "unclecheng-reduce-ai-perception-v2__skillhub",
+      "displayName": "humanizer",
+      "description": "去除文本中的AI写作痕迹，让文字读起来更像人类写作。当用户要求'去AI味'、'降AI味'、'让回复更像人话'、'润色'、'改写得更自然'时使",
+      "source": "local",
+      "namespace": "",
+      "slug": "unclecheng-reduce-ai-perception-v2__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\unclecheng-reduce-ai-perception-v2__skillhub"
+    }
+  ]
+}

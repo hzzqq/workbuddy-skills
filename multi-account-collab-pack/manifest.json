@@ -1,0 +1,86 @@
+{
+  "bundle": "multi-account-collab-pack",
+  "version": "1.0.0",
+  "members": [
+    {
+      "dir": "@user_b4da0893/desktop-file-sync-cn",
+      "displayName": "文件同步助手",
+      "description": "用于在 Windows、macOS、Linux、NAS 或家庭服务器之间同步工作文件、照片原片、笔记、项目资料和共享目录，也用于排查文件不同",
+      "source": "skillhub",
+      "namespace": "user_b4da0893",
+      "slug": "desktop-file-sync-cn",
+      "found": true,
+      "install_cmd": "skillhub install desktop-file-sync-cn --namespace user_b4da0893"
+    },
+    {
+      "dir": "@org-k6bcf2fv/dbxcli",
+      "displayName": "云盘运维 文件同步 团队协作",
+      "description": "用命令行高效管理 Dropbox 文件、共享链接与团队空间，支持脚本自动化与 CI/CD 集成。",
+      "source": "skillhub",
+      "namespace": "org-k6bcf2fv",
+      "slug": "dbxcli",
+      "found": true,
+      "install_cmd": "skillhub install dbxcli --namespace org-k6bcf2fv"
+    },
+    {
+      "dir": "@user_73de2035/workbuddy-migration-assistant",
+      "displayName": "WorkBuddy迁移助手",
+      "description": "WorkBuddy 国内版跨机器资产迁移助手（适配客户端 5.7.6）。在更换电脑时，将旧机器的全部个人资产（skills、memory、c",
+      "source": "skillhub",
+      "namespace": "user_73de2035",
+      "slug": "workbuddy-migration-assistant",
+      "found": true,
+      "install_cmd": "skillhub install workbuddy-migration-assistant --namespace user_73de2035"
+    },
+    {
+      "dir": "@user_12d85a03/backup-yourself",
+      "displayName": "backup-yourself",
+      "description": "Back up the entire agent memory system of the current WorkBuddy accoun",
+      "source": "skillhub",
+      "namespace": "user_12d85a03",
+      "slug": "backup-yourself",
+      "found": true,
+      "install_cmd": "skillhub install backup-yourself --namespace user_12d85a03"
+    },
+    {
+      "dir": "@indiv-aakook/memory-manager-v2",
+      "displayName": "memory-manager-v2",
+      "description": "AI 记忆加速器 / Token 节流阀：以「更小、更准、更省」为目标管理 .workbuddy/memory/。 核心能力：治理闭环（go",
+      "source": "skillhub",
+      "namespace": "indiv-aakook",
+      "slug": "memory-manager-v2",
+      "found": true,
+      "install_cmd": "skillhub install memory-manager-v2 --namespace indiv-aakook"
+    },
+    {
+      "dir": "@user_93c42d4c/xy-vault",
+      "displayName": "知识库",
+      "description": "【知识库】把用户手上的本地文件夹（客户档案、货盘表、朋友圈素材、课程逐字稿、代理政策历史版本、直播复盘…）变成 AI 能稳定查、稳定放、稳定",
+      "source": "skillhub",
+      "namespace": "user_93c42d4c",
+      "slug": "xy-vault",
+      "found": true,
+      "install_cmd": "skillhub install xy-vault --namespace user_93c42d4c"
+    },
+    {
+      "dir": "@user_8a3569c1/data-rights-guard",
+      "displayName": "训练数据版权护栏（Data Rights Guard）",
+      "description": "当用户说『爬的数据能拿来训练吗』『数据集没写许可证』『微调数据版权合规吗』『怎么确认数据能商用』，或在用数据(爬取/购买/公开集/用户授权)",
+      "source": "skillhub",
+      "namespace": "user_8a3569c1",
+      "slug": "data-rights-guard",
+      "found": true,
+      "install_cmd": "skillhub install data-rights-guard --namespace user_8a3569c1"
+    },
+    {
+      "dir": "@user_29729038/multi-agent-project-builder",
+      "displayName": "multi-agent-project-builder",
+      "description": "多 Agent 项目协作工厂 - 一键实现智能分工完成互联网项目",
+      "source": "skillhub",
+      "namespace": "user_29729038",
+      "slug": "multi-agent-project-builder",
+      "found": true,
+      "install_cmd": "skillhub install multi-agent-project-builder --namespace user_29729038"
+    }
+  ]
+}

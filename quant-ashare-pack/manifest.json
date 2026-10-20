@@ -1,0 +1,236 @@
+{
+  "bundle": "quant-ashare-pack",
+  "version": "1.0.0",
+  "members": [
+    {
+      "dir": "a-share-daily-review",
+      "displayName": "A股每日复盘",
+      "description": ">-",
+      "source": "local",
+      "namespace": "",
+      "slug": "a-share-daily-review",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\a-share-daily-review"
+    },
+    {
+      "dir": "a-stock-data",
+      "displayName": "A股全栈数据",
+      "description": "A股全栈数据工具包 — 覆盖行情(mootdx+腾讯+百度K线)、研报(东财+同花顺+iwencai)、信号(同花顺热点+北向+龙虎榜+解禁",
+      "source": "local",
+      "namespace": "",
+      "slug": "a-stock-data",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\a-stock-data"
+    },
+    {
+      "dir": "a-stock-multi-factor-screener__skillhub",
+      "displayName": "onequant-backtest",
+      "description": "OneQuant 4.0 量化交易系统 — A股本地量化平台，Windows/macOS/Linux全平台支持(Docker)。5种调用方式",
+      "source": "local",
+      "namespace": "",
+      "slug": "a-stock-multi-factor-screener__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\a-stock-multi-factor-screener__skillhub"
+    },
+    {
+      "dir": "akshare-stock__skillhub",
+      "displayName": "akshare-stock",
+      "description": "A股量化数据分析工具，基于AkShare库获取A股行情、财务数据、板块信息等。用于回答关于A股股票查询、行情数据、财务分析、选股等问题。",
+      "source": "local",
+      "namespace": "",
+      "slug": "akshare-stock__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\akshare-stock__skillhub"
+    },
+    {
+      "dir": "ashare-short-term-trading",
+      "displayName": "A股短线交易",
+      "description": "A 股日内与短线决策辅助工具，覆盖盘后诊断、标的初筛、盘中节点评估、单标的因子分析四个环节。 支持从交割单回溯每笔交易的买卖质量并输出结构化",
+      "source": "local",
+      "namespace": "",
+      "slug": "ashare-short-term-trading",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\ashare-short-term-trading"
+    },
+    {
+      "dir": "cnfinancialscraper__skillhub",
+      "displayName": "中国金融机构数据爬取与分析",
+      "description": "中国金融机构数据爬取与分析综合 Skill v10.0.0。2334家/43大类机构名单、60+财经媒体源舆情、 A股报告/公告/研报、60",
+      "source": "local",
+      "namespace": "",
+      "slug": "cnfinancialscraper__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\cnfinancialscraper__skillhub"
+    },
+    {
+      "dir": "daily-financial-news",
+      "displayName": "每日财经新闻",
+      "description": ">-",
+      "source": "local",
+      "namespace": "",
+      "slug": "daily-financial-news",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\daily-financial-news"
+    },
+    {
+      "dir": "hk-quant-advisor__skillhub",
+      "displayName": "hk-quant-advisor",
+      "description": "港股专业量化交易决策顾问 v1.0.2。模拟\"交易员 + 风控官 + 绩效分析师\"三重角色，基于多维度实时数据，运行精确量化策略，为港股账户",
+      "source": "local",
+      "namespace": "",
+      "slug": "hk-quant-advisor__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\hk-quant-advisor__skillhub"
+    },
+    {
+      "dir": "invest-calendar",
+      "displayName": "投资财经日历",
+      "description": "财经事件日历技能。查询CPI/PPI/GDP/PMI/非农/PCE等宏观数据发布时间、FOMC/MLF/LPR等央行决议、财报/IPO/解禁",
+      "source": "local",
+      "namespace": "",
+      "slug": "invest-calendar",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\invest-calendar"
+    },
+    {
+      "dir": "quant-backtest-strategy__skillhub",
+      "displayName": "onequant-backtest",
+      "description": "OneQuant 4.0 量化交易系统 — A股本地量化平台。5种调用方式：①Web界面(浏览器点点点) ②REST API(Python/",
+      "source": "local",
+      "namespace": "",
+      "slug": "quant-backtest-strategy__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\quant-backtest-strategy__skillhub"
+    },
+    {
+      "dir": "quant-backtest-strategy__user_a9caeb3c__skillhub",
+      "displayName": "onequant-backtest",
+      "description": "OneQuant 4.0 量化交易系统 — A股本地量化平台。5种调用方式：①Web界面(浏览器点点点) ②REST API(Python/",
+      "source": "local",
+      "namespace": "",
+      "slug": "quant-backtest-strategy__user_a9caeb3c__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\quant-backtest-strategy__user_a9caeb3c__skillhub"
+    },
+    {
+      "dir": "quant-signal-landing-sop",
+      "displayName": "quant-signal-landing-sop",
+      "description": "量化信号重训→落地生产的 SOP 与三大陷阱。当用户要重训/替换/集成 A股多因子预测信号（GRU/LightGBM/集成），或遇到「训练被",
+      "source": "local",
+      "namespace": "",
+      "slug": "quant-signal-landing-sop",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\quant-signal-landing-sop"
+    },
+    {
+      "dir": "stock-evaluator__skillhub",
+      "displayName": "stock-evaluator-v3",
+      "description": "Comprehensive evaluation of potential stock investments combining valu",
+      "source": "local",
+      "namespace": "",
+      "slug": "stock-evaluator__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\stock-evaluator__skillhub"
+    },
+    {
+      "dir": "stock-monitor__skillhub",
+      "displayName": "stock-monitor",
+      "description": "股票价格实时监控。支持多只股票监控，使用 Yahoo Finance API 获取实时股价，自定义涨跌阈值提醒。当股价波动超过设定阈值时自动",
+      "source": "local",
+      "namespace": "",
+      "slug": "stock-monitor__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\stock-monitor__skillhub"
+    },
+    {
+      "dir": "stock-mtl-v5__skillhub",
+      "displayName": "stock-monitor",
+      "description": "股票实时监测助手，A股盯盘利器，内置股票分析专家。 触发词：监测股票、股票提醒、实时盯盘、盯盘助手、帮我监测、帮我盯盘、 股票异动提醒、涨停",
+      "source": "local",
+      "namespace": "",
+      "slug": "stock-mtl-v5__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\stock-mtl-v5__skillhub"
+    },
+    {
+      "dir": "stock-selecter__skillhub",
+      "displayName": "stock-selecter",
+      "description": "统一选股技能包，整合11种策略（ROE筛选、MACD底背离、高股息、低估值、 费雪成长股、长期低位、近期放量、趋势分析、K线形态、布林带下轨",
+      "source": "local",
+      "namespace": "",
+      "slug": "stock-selecter__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\stock-selecter__skillhub"
+    },
+    {
+      "dir": "ths-financial-data__skillhub",
+      "displayName": "ths-financial-data",
+      "description": "该skill用于获取股票市场数据，包括实时行情、中文名称查询、键盘缩写转换、资金流向和日K线数据。使用thsdk库提供同花顺数据接口支持。支",
+      "source": "local",
+      "namespace": "",
+      "slug": "ths-financial-data__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\ths-financial-data__skillhub"
+    },
+    {
+      "dir": "ticai-lieshou__skillhub",
+      "displayName": "stock-catalyst-hunter",
+      "description": "当用户想知道一条新闻、传闻、政策变化、地缘事件、行业扰动或截图会对应哪些 A 股题材和股票时，使用这个 skill。它会识别事件、搜索中文财",
+      "source": "local",
+      "namespace": "",
+      "slug": "ticai-lieshou__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\ticai-lieshou__skillhub"
+    },
+    {
+      "dir": "westock-data__skillhub",
+      "displayName": "westock-data",
+      "description": "金融市场结构化数据查询的权威入口。支持股票（A股/港股/美股）、ETF、指数、板块、期货、外汇、可转债的 K 线、技术指标、筹码、财报、研报",
+      "source": "local",
+      "namespace": "",
+      "slug": "westock-data__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\westock-data__skillhub"
+    },
+    {
+      "dir": "westock-data__tencent-adm__skillhub",
+      "displayName": "westock-data",
+      "description": "金融市场结构化数据查询的权威入口。支持股票（A股/港股/美股）、ETF、指数、板块、期货、外汇、可转债的 K 线、技术指标、筹码、财报、研报",
+      "source": "local",
+      "namespace": "",
+      "slug": "westock-data__tencent-adm__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\westock-data__tencent-adm__skillhub"
+    },
+    {
+      "dir": "aistockresearcher__skillhub",
+      "displayName": "全球智能投研",
+      "description": "全球智能投研工具 v11.0 — 多源数据强化 + AI 期货/资金流/指数/组合深度分析 + 金融六日 MCP 桥接。 叠加 v10.0 ",
+      "source": "local",
+      "namespace": "",
+      "slug": "aistockresearcher__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\aistockresearcher__skillhub"
+    },
+    {
+      "dir": "牧羊人指标",
+      "displayName": "牧羊人指标",
+      "description": "股票（A股）类型的情绪指标技能：把「牧羊人情绪指标」做成判断次日（第二天）行情方向的工具。 输入当日市场广度（上涨/下跌/平盘家数、跌停/触",
+      "source": "local",
+      "namespace": "",
+      "slug": "牧羊人指标",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\牧羊人指标"
+    },
+    {
+      "dir": "futures-combo",
+      "displayName": "futures-combo",
+      "description": "商品期货组合分析专家 —— 专为老板的 6 个实盘品种（玻璃FG / 纸浆SP / 纯碱SA / 鸡蛋JD / 白糖SR / 乙二醇EG）定",
+      "source": "local",
+      "namespace": "",
+      "slug": "futures-combo",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\futures-combo"
+    }
+  ]
+}

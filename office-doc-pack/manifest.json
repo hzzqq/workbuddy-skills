@@ -1,0 +1,36 @@
+{
+  "bundle": "office-doc-pack",
+  "version": "1.0.0",
+  "members": [
+    {
+      "dir": "666-v2__skillhub",
+      "displayName": "ppt-generator",
+      "description": "生成专业PPT演示文稿。当用户要求创建PPT、幻灯片、演示文稿时使用。适用于工作汇报、项目展示、商业计划、培训课件等场景。",
+      "source": "local",
+      "namespace": "",
+      "slug": "666-v2__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\666-v2__skillhub"
+    },
+    {
+      "dir": "docx-template-dynamic-paragraphs",
+      "displayName": "docx-template-dynamic-paragraphs",
+      "description": "用 python-docx 对「固定 docx 模板 + 只换文字/图片、保留原排版」的生成器， 把某个区块的正文段落改成可动态增减（用户想",
+      "source": "local",
+      "namespace": "",
+      "slug": "docx-template-dynamic-paragraphs",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\docx-template-dynamic-paragraphs"
+    },
+    {
+      "dir": "wps-office-suite__skillhub",
+      "displayName": "WPS Office 全家桶",
+      "description": "WPS Office 全家桶 - 四引擎（WPS/MS Office/LibreOffice/纯Python）智能识别用户已安装软件，纯Py",
+      "source": "local",
+      "namespace": "",
+      "slug": "wps-office-suite__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\wps-office-suite__skillhub"
+    }
+  ]
+}

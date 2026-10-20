@@ -1,0 +1,106 @@
+{
+  "bundle": "agent-self-evo-pack",
+  "version": "1.0.0",
+  "members": [
+    {
+      "dir": "active-self-improvement__skillhub",
+      "displayName": "active-self-improvement",
+      "description": "Active self-improvement loop that reads learnings, errors, batch outpu",
+      "source": "local",
+      "namespace": "",
+      "slug": "active-self-improvement__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\active-self-improvement__skillhub"
+    },
+    {
+      "dir": "ai-evolution-engine-v2__skillhub",
+      "displayName": "ai-evolution-engine",
+      "description": "AI自我进化引擎 - 基于SEA循环(Sense-Evolve-Act)的AI成长系统。自我评估、学习引擎、进化机制、协作学习、安全保障。",
+      "source": "local",
+      "namespace": "",
+      "slug": "ai-evolution-engine-v2__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\ai-evolution-engine-v2__skillhub"
+    },
+    {
+      "dir": "auto-learn-skill__skillhub",
+      "displayName": "auto-learn-skill",
+      "description": "自动学习技能 - 从对话中自动提取知识并创建技能。基于Memento-Skills的Read-Write循环机制。适用于AI Agent自进",
+      "source": "local",
+      "namespace": "",
+      "slug": "auto-learn-skill__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\auto-learn-skill__skillhub"
+    },
+    {
+      "dir": "autoimprove__skillhub",
+      "displayName": "autoimprove",
+      "description": "Autonomous optimization loop that improves any measurable thing. Point",
+      "source": "local",
+      "namespace": "",
+      "slug": "autoimprove__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\autoimprove__skillhub"
+    },
+    {
+      "dir": "autoresearch__skillhub",
+      "displayName": "autoresearch",
+      "description": "Autonomous experiment loop for AI agents. Use when the user wants to r",
+      "source": "local",
+      "namespace": "",
+      "slug": "autoresearch__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\autoresearch__skillhub"
+    },
+    {
+      "dir": "self-debug",
+      "displayName": "self-debug",
+      "description": "自我排查与变通框架。当 AI 遇到异常结果、工具报错、数据缺失、重复失败时，按 Layer 1-6 逐步自己排查。不要直接问用户，先走完整个",
+      "source": "local",
+      "namespace": "",
+      "slug": "self-debug",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\self-debug"
+    },
+    {
+      "dir": "self-driving-dev",
+      "displayName": "self-driving-dev",
+      "description": "自主驱动的开发自循环 skill：在本项目里自己找活干、自己定方案、自己实现、自己验收， 反复循环；每一步都自行决策，无需人工批准。 北极星",
+      "source": "local",
+      "namespace": "",
+      "slug": "self-driving-dev",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\self-driving-dev"
+    },
+    {
+      "dir": "self-evo-agent__skillhub",
+      "displayName": "self-evolving-agent",
+      "description": "Build a goal-driven self-learning loop for OpenClaw and coding agents.",
+      "source": "local",
+      "namespace": "",
+      "slug": "self-evo-agent__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\self-evo-agent__skillhub"
+    },
+    {
+      "dir": "using-superpowers",
+      "displayName": "using-superpowers",
+      "description": "Use when starting any conversation - establishes how to find and use s",
+      "source": "local",
+      "namespace": "",
+      "slug": "using-superpowers",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\using-superpowers"
+    },
+    {
+      "dir": "solo-pipeline__skillhub",
+      "displayName": "solo-pipeline",
+      "description": "Launch automated multi-skill pipeline that chains skills into a loop. ",
+      "source": "local",
+      "namespace": "",
+      "slug": "solo-pipeline__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\solo-pipeline__skillhub"
+    }
+  ]
+}

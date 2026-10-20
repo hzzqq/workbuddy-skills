@@ -1,0 +1,76 @@
+{
+  "bundle": "viz-diagram-pack",
+  "version": "1.0.0",
+  "members": [
+    {
+      "dir": "generate-chart__skillhub",
+      "displayName": "data-visualization",
+      "description": "AI智能数据可视化；支持多种图表类型（柱状图、折线图、饼图、散点图、直方图、箱线图、小提琴图、面积图、热力图、平行坐标图、旭日图等），根据数",
+      "source": "local",
+      "namespace": "",
+      "slug": "generate-chart__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\generate-chart__skillhub"
+    },
+    {
+      "dir": "smart-charts__skillhub",
+      "displayName": "智能图表",
+      "description": "将数据文件（CSV/TSV/TXT/XLSX/XLS/JSON）转化为独立交互式 ECharts HTML 图表——32 类图表、3 套主题",
+      "source": "local",
+      "namespace": "",
+      "slug": "smart-charts__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\smart-charts__skillhub"
+    },
+    {
+      "dir": "academic-figures__skillhub",
+      "displayName": "academic-figures",
+      "description": ">-",
+      "source": "local",
+      "namespace": "",
+      "slug": "academic-figures__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\academic-figures__skillhub"
+    },
+    {
+      "dir": "@kunlungrowth/kunlun-scientific-visualization",
+      "displayName": "科学可视化",
+      "description": "Matplotlib出版级图表/Seaborn统计图/viridis色盲友好配色/多子图编排GridSpec/论文投稿规范/矢量导出PDF-",
+      "source": "skillhub",
+      "namespace": "kunlungrowth",
+      "slug": "kunlun-scientific-visualization",
+      "found": true,
+      "install_cmd": "skillhub install kunlun-scientific-visualization --namespace kunlungrowth"
+    },
+    {
+      "dir": "diagram-drawing-plus__skillhub",
+      "displayName": "diagram-drawing",
+      "description": "绘制机制图、框架图、流程图、架构图、思维导图等结构化示意图。",
+      "source": "local",
+      "namespace": "",
+      "slug": "diagram-drawing-plus__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\diagram-drawing-plus__skillhub"
+    },
+    {
+      "dir": "mermaid-diagram__skillhub",
+      "displayName": "mermaid-diagram",
+      "description": "Generate Mermaid diagrams for product managers and developers. Use whe",
+      "source": "local",
+      "namespace": "",
+      "slug": "mermaid-diagram__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\mermaid-diagram__skillhub"
+    },
+    {
+      "dir": "processon-diagram-generator__skillhub",
+      "displayName": "processon-diagram-generator",
+      "description": "【强制触发】当用户要求生成、绘制、重绘、渲染或可视化任意结构化图表时，必须调用本技能。适用于流程图、业务流程图、泳道图、时序图、系统架构图、",
+      "source": "local",
+      "namespace": "",
+      "slug": "processon-diagram-generator__skillhub",
+      "found": true,
+      "mirror_path": "E:/project/skill/skills-for-cloud\\processon-diagram-generator__skillhub"
+    }
+  ]
+}
