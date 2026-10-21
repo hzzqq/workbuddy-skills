@@ -5,7 +5,8 @@ agent_created: true
 slug: data-source-staleness-guard
 displayName: 数据源时效护栏
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 数据源停更 / 时效护栏
 

@@ -9,7 +9,8 @@ description: >
 tags: [planning, context, workflow, manus, memory, complex-tasks]
 slug: planning-with-files
 displayName: 文件化规划
-license: MIT---
+license: MIT
+---
 
 # Planning with Files
 

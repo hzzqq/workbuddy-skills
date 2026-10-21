@@ -11,7 +11,8 @@ keywords: [refactor, god-module, split, python, re-export, circular-import, valu
 slug: split-god-module
 displayName: 神模块拆分
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 上帝模块最低风险拆分法
 

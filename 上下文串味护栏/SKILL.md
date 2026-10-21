@@ -5,7 +5,8 @@ agent_created: true
 slug: stale-context-binding
 displayName: 上下文串味护栏
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # stale-context-binding：别让上一个实体的资料串进这一篇
 

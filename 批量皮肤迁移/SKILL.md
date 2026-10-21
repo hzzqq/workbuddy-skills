@@ -5,7 +5,8 @@ agent_created: true
 slug: batch-skin-contract-migration
 displayName: 批量皮肤迁移
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 批量皮肤契约迁移（batch skin-contract migration）
 

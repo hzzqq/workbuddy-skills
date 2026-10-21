@@ -10,7 +10,8 @@ agent_created: true
 slug: drive-all
 version: 1.0.0
 displayName: 全机派活扫描
-license: MIT---
+license: MIT
+---
 
 # drive-all · 全盘自驱派活（每小时监测 + 自动派活）
 

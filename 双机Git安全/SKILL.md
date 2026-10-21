@@ -5,7 +5,8 @@ agent_created: true
 slug: dual-machine-git-safety
 displayName: 双机Git安全
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 双机/多 Agent 安全协作 Git 红线
 

@@ -4,7 +4,8 @@ description: 企业微信自建应用桥接 — 让 WorkBuddy 把任务进度/�
 slug: wechat-bridge
 version: 1.0.0
 displayName: 企业微信桥接
-license: MIT---
+license: MIT
+---
 
 # wechat-bridge — 企业微信桥接（推送 + 反向操控）
 

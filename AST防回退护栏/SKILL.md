@@ -5,7 +5,8 @@ agent_created: true
 slug: ast-invariant-guard
 displayName: AST防回退护栏
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # AST 源码级防回退护栏
 

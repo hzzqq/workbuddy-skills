@@ -5,7 +5,8 @@ agent_created: true
 slug: long-running-task-healthcheck
 displayName: 长任务判活
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 长任务后台运行与判活
 

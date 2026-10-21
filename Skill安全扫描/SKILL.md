@@ -7,7 +7,8 @@ description: Scan Clawdbot and MCP skills for malware, spyware, crypto-miners,
 slug: skill-scanner
 displayName: Skill安全扫描
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # Skill Scanner
 

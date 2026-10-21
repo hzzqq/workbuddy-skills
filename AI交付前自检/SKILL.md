@@ -8,7 +8,8 @@ description_zh: AI交付前全自动自检技能。任何一次向用户交付�
 description_en: AI pre-delivery automated self-check skill. Before ANY result delivery to the user (present_files, final summary, conclusion, status report, or asking a question), this skill MUST be actually loaded and executed, enumerating the D1-D12 gate snapshot item by item over the ENTIRE message including the tail. It intercepts responsibility-shifting, half-done delivery, hidden-optimal-step deferral, pseudo-blocking questions, tail exemption, lack of autonomous closure, language backdoors, and stamp-before-work patterns that push work back to the user or replace real scanning with mere claims. No real load state means the gate was not passed. Mandatory final check before sending, for all projects and all delivery forms.
 agent_created: true
 slug: delivery-no-pseudoblock
-license: MIT---
+license: MIT
+---
 
 # 交付前伪阻断 / 缓干闸门（3.11 专项）
 

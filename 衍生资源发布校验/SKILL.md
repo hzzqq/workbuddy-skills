@@ -5,7 +5,8 @@ agent_created: true
 slug: derived-artifact-verify-publish
 displayName: 衍生资源发布校验
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 衍生资源的三道护栏：写死默认 · 真函数校验 · 先验后上线
 

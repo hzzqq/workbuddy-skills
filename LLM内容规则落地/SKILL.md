@@ -5,7 +5,8 @@ agent_created: true
 slug: llm-content-rule-rollout
 displayName: LLM内容规则落地
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 多路径 LLM 文案生成：内容规则落地 SOP
 

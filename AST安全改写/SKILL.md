@@ -4,7 +4,8 @@ description: 用 AST 安全改写 Python 源码（批量补参数、插入配置
 slug: ast-safe-edit
 displayName: AST安全改写
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # AST 安全改写 Python 源码
 

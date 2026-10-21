@@ -5,7 +5,8 @@ agent_created: true
 slug: gen-copy-quality-guard
 displayName: 生成文案质量护栏
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 文案生成器质量护栏
 

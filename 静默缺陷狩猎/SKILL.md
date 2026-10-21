@@ -5,7 +5,8 @@ agent_created: true
 slug: silent-failure-defect-hunt
 displayName: 静默缺陷狩猎
 version: 1.0.0
-license: MIT---
+license: MIT
+---
 
 # 静默失败缺陷狩猎 SOP（锐评 N 轮迭代）
 
