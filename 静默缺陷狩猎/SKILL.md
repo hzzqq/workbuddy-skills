@@ -3,8 +3,8 @@ name: silent-failure-defect-hunt
 description: 用「可证伪的侦察 + 一轮一缺陷」的 SOP 在既有代码库里找并修真实缺陷（尤其「不崩溃但语义错」的静默失败家族），每轮交付修复+定向回归+AST 守卫+提交推送。适用于：用户说「锐评迭代 N 次」「优化项目」「找 bug」「审计代码质量」，或需要把健康检查式的走场迭代升级成真实缺陷修复时。
 agent_created: true
 slug: silent-failure-defect-hunt
-displayName: 静默缺陷狩猎
-version: 1.0.0
+displayName: 静默缺陷狩猎·缺陷
+version: 1.0.1
 license: MIT
 ---
 
@@ -197,3 +197,11 @@ grep -rn "_get_conn()\|sqlite3\.connect(" --include=*.py . | grep -v tests
 | R1 `sha` | 现象 + 量化证据（如「4093 日中 177 天平盘被当作下跌」） | 一句话修法 | 测试文件 N 例 |
 
 结尾给：验证基线（各套件 passed 数）、远端同步状态、存量富矿（如"仍有 60+ 处 except: pass"）作为下一轮输入。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

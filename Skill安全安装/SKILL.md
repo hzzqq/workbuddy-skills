@@ -8,8 +8,8 @@ description: |
   触发词："安装外部 skill""导入 skill""安全审查 skill""卸载 skill""校验 skill 完整性"。
 agent_created: true
 slug: skill-safe-install
-version: 1.0.0
-displayName: Skill 安全安装
+version: 1.0.1
+displayName: Skill安全安装·风险扫描
 ---
 
 # Skill 安全安装/卸载器（skill-safe-install）
@@ -66,3 +66,11 @@ python .../install_skill.py verify <skill名> --target user
 ## 注册表位置
 - 用户级：`~/.workbuddy/skills/.skill-registry.json`
 - 项目级：`<cwd>/.workbuddy/skills/.skill-registry.json`
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否拦截所有恶意 skill？→ 仅基于正则/文本检测，复杂混淆可能绕过，搭配人工复核。
+- **反模式**：不要把它当万能工具；数据/样本不足时按设计诚实返回「无法判断」，请勿强行要求结论。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

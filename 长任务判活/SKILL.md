@@ -3,8 +3,8 @@ name: long-running-task-healthcheck
 description: 长任务（训练/回测/批量作业）在后台启动后，正确判活、避免「静默假死」误判与「静默真死」漏判。适用于：启动 CPU 训练/回测/构建等耗时任务后需要确认它是否真在推进、日志长时间无输出时判断是正常还是挂了、需要可靠地在后台运行跨工具调用的长任务、排查「进程莫名其妙消失且无报错」。核心是用 CPU 时间增量而非日志/内存判活，并区分「日志不刷新」与「进程已死」这两种完全不同的状态。
 agent_created: true
 slug: long-running-task-healthcheck
-displayName: 长任务判活
-version: 1.0.0
+displayName: 长任务判活·心跳
+version: 1.0.1
 license: MIT
 ---
 
@@ -111,3 +111,11 @@ python -u script.py --smoke      # 前台 + 无缓冲，真实报错会立刻打
 cat /proc/<pid>/stat | awk '{print $14+$15}'   # utime + stime（jiffies）
 ps -o pid,time,etime,%cpu -p <pid>             # 或看 TIME 列是否增长
 ```
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

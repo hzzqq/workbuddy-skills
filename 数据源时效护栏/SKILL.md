@@ -3,8 +3,8 @@ name: data-source-staleness-guard
 description: 数据源时效性与停更（stall）护栏。当项目存在「多个外部数据源 → 落盘 → 驱动决策/报告」的链路，且出现过「数据悄悄停更、系统却照常给出结论」的静默失败时使用。覆盖 lag-based stale 与 advance-based stall 两种判定的区别、SQLite 观测表、看板/徽标接线、以及必须配套的可证伪测试。
 agent_created: true
 slug: data-source-staleness-guard
-displayName: 数据源时效护栏
-version: 1.0.0
+displayName: 数据源时效护栏·时效
+version: 1.0.1
 license: MIT
 ---
 
@@ -71,3 +71,11 @@ license: MIT
 - [ ] 上述测试全绿
 - [ ] 页面冒烟通过（新页面通常会被自动发现）
 - [ ] 决策面板肉眼可见「as_of / 滞后 N 天 / 已降权」，而不是只有一个笼统的"数据可能过期"
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

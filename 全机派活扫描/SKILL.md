@@ -8,8 +8,8 @@ description: |
   「派活给全部项目」「一键叫所有项目开工」「全盘派活」。本 skill 安装于用户级目录，任何项目可用。
 agent_created: true
 slug: drive-all
-version: 1.0.0
-displayName: 全机派活扫描
+version: 1.0.1
+displayName: 全机派活扫描·多项目自驱
 license: MIT
 ---
 
@@ -179,3 +179,11 @@ license: MIT
 - 已建 `automation`：名称「drive-all 每小时全盘派活」，rrule=`FREQ=HOURLY;INTERVAL=1`，
   cwds=`E:/project`，model=hy3，thinking=0，ACT存在即每小时自动跑本 skill 的派活逻辑。
 - 该自动化 prompt 复用上方【核心规则】+【子 agent 派活模板】。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：同时跑很多项目会崩吗？→ 有防雪崩硬约束（单轮最多 2 项目、错峰定时）。
+- **反模式**：不要把它当万能工具；数据/样本不足时按设计诚实返回「无法判断」，请勿强行要求结论。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

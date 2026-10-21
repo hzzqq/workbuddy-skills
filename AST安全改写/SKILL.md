@@ -2,8 +2,8 @@
 name: ast-safe-edit
 description: 用 AST 安全改写 Python 源码（批量补参数、插入配置、改调用）时，规避「字节偏移 vs 字符偏移」错位坑与「双逗号」语法坑。适用于对含中文/多字节字符的 .py 做机械化批量编辑（如给所有 st.dataframe 补 height=、给 st.plotly_chart 补 config=）。
 slug: ast-safe-edit
-displayName: AST安全改写
-version: 1.0.0
+displayName: AST安全改写·代码重构
+version: 1.0.1
 license: MIT
 ---
 
@@ -68,3 +68,11 @@ new_src = new_src[:off] + insert + new_src[off:]
 ```
 parse → 收集 (offset, text) 候选 → 过滤（精确形态 + 字节→字符换算）→ 降序应用（双逗号防护）→ ast.parse 校验 → 写盘
 ```
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

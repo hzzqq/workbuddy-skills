@@ -9,8 +9,8 @@ description: >-
   派活没反应、清死锁、unstick、refresh。
 agent_created: true
 slug: unstick
-version: 1.0.0
-displayName: 任务解卡器
+version: 1.0.1
+displayName: 任务解卡器·卡点诊断
 ---
 
 # unstick · WorkBuddy 任务解卡器
@@ -97,3 +97,11 @@ S=C:\Users\Administrator\.workbuddy\skills\unstick\scripts\unstick.py
 - unstick 的 `--fix` = 按 **state 停滞** 精准清孤儿锁（识别"假新鲜锁"），
   这是 `--clean-stale` 覆盖不到的场景，也是老板手动"刷新解卡"的主入口。
 - 两者互补：日常靠 drive-all 兜底，卡住时用 unstick 立即刷新。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：能自动破局吗？→ 给出诊断清单与破局步骤，需你确认执行。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

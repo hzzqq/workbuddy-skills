@@ -6,7 +6,7 @@ description: Scan Clawdbot and MCP skills for malware, spyware, crypto-miners,
   obfuscation techniques.
 slug: skill-scanner
 displayName: Skill安全扫描
-version: 1.0.0
+version: 1.0.1
 license: MIT
 ---
 
@@ -38,20 +38,20 @@ python skill_scanner.py /path/to/skill-folder
 "Run a security audit on the remotion skill"
 ```
 
-### Web UI
-```bash
-pip install streamlit
-streamlit run streamlit_ui.py
-```
-
 ## Requirements
 - Python 3.7+
 - No additional dependencies (uses Python standard library)
-- Streamlit (optional, for Web UI)
 
 ## Entry Point
 - **CLI:** `skill_scanner.py`
-- **Web UI:** `streamlit_ui.py`
 
 ## Tags
 #security #malware #spyware #crypto-mining #scanner #audit #code-analysis #mcp #clawdbot #agent-skills #safety #threat-detection #vulnerability
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

@@ -7,8 +7,8 @@ description: |
   本 skill 安装于用户级目录，跨项目通用。
 agent_created: true
 slug: force-hy3-model
-version: 1.0.0
-displayName: Hy3 模型强制器
+version: 1.0.1
+displayName: Hy3模型强制器·模型
 ---
 
 # 强制 Hy3 模型（force-hy3-model）
@@ -57,3 +57,11 @@ displayName: Hy3 模型强制器
 
 ## 备注
 - 若哪天 Hy3 不再免费或老板改主意，删掉 MEMORY.md 里对应章节 + 停用本 skill 即可，存量自动化的 model_id 可再批量切回 `auto`。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

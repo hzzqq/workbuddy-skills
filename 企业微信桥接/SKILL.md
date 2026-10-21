@@ -2,8 +2,8 @@
 name: wechat-bridge
 description: 企业微信自建应用桥接 — 让 WorkBuddy 把任务进度/结果推送到老板微信，并支持老板在微信里发指令反向操控（手机远程操作 AI 任务）。适用于「微信推送」「微信远程操控」「手机控制 WorkBuddy」等需求。
 slug: wechat-bridge
-version: 1.0.0
-displayName: 企业微信桥接
+version: 1.0.1
+displayName: 企业微信桥接·消息
 license: MIT
 ---
 
@@ -110,3 +110,11 @@ python wechat_bridge.py serve 8800
 - config.json 含 secret，**绝不提交 git / 不外传**。
 - 纯桥接，不替老板做任何未授权动作；老板微信指令解析后只执行明确的安全操作（启动已配置的迭代、查进度、读日志），涉及破坏性操作（删文件、force push）一律二次确认。
 - 若企业微信 API 域名 `qyapi.weixin.qq.com` 在沙箱被屏蔽，需在 WorkBuddy 沙箱配置域名白名单。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

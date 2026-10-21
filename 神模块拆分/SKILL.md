@@ -9,8 +9,8 @@ description: >
   (2) 环依赖——共享 helper 必须放进双方都能 import 的叶子 _xxx_base.py，绝不能让叶子 import 回父模块。
 keywords: [refactor, god-module, split, python, re-export, circular-import, value-copy]
 slug: split-god-module
-displayName: 神模块拆分
-version: 1.0.0
+displayName: 神模块拆分·重构
+version: 1.0.1
 license: MIT
 ---
 
@@ -75,3 +75,11 @@ from modules._<m>_leaf import (  # noqa: E402,F401
 - 单 class 大文件（如 `visualizer.py` 的 `Visualizer`）——拆类风险高、收益低，跳过。
 - 纯 CSS 字符串常量模块（如 `ui_theme.py`）——虽大但内聚，跳过。
 - 已较内聚的 3-class 文件（如 `backtest.py`）——只抽真正独立的叶子（如结果 dataclass）才划算。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

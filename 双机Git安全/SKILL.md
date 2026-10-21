@@ -3,8 +3,8 @@ name: dual-machine-git-safety
 description: 双机/多 agent 协作同一 git 仓库时的安全红线 + 护栏。适用于：任何在"同账号同仓、双机或同工作树多 agent"仓库上做 git 推送/提交/合并/变基/破坏性操作（已知 StockSignal hzzqq/StockSignal、raft-kv hzz/raft-kv 是这种仓库）；看到 non-fast-forward / 历史分叉；刚做完与另一台机器并行的改动；或用户问"双机协作会不会出错"。把"双机协作"的红线从记忆里抽出来，防止并行编辑导致数据破坏或逻辑静默覆盖。配合 ast-invariant-guard 使用（代码级不变量锁死）。
 agent_created: true
 slug: dual-machine-git-safety
-displayName: 双机Git安全
-version: 1.0.0
+displayName: 双机Git安全·ff-only
+version: 1.0.1
 license: MIT
 ---
 
@@ -106,3 +106,11 @@ git push --dry-run origin <br>                           # 3. 干跑：一次暴
 - [ ] 提交信息不含 `--no-verify` 绕过
 - [ ] 双机并行改的同一文件，相关不变量测试已绿
 - [ ] 推送后 `ls-remote` 复核远端 == 本地
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：会 force push 吗？→ 严守 fast-forward only，禁止 force push / --no-verify。
+- **反模式**：不要把它当万能工具；数据/样本不足时按设计诚实返回「无法判断」，请勿强行要求结论。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

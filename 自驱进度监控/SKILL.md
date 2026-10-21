@@ -7,8 +7,8 @@ description: |
   与 drive-all（派活）/ unstick（解卡）配套：supervisor 看进度、drive-all 派活、unstick 解卡。
 agent_created: true
 slug: dev-supervisor
-version: 1.0.0
-displayName: 自驱进度监控
+version: 1.0.1
+displayName: 自驱进度监控·进度看板
 ---
 
 # dev-supervisor · AI 开发进度监督
@@ -57,3 +57,11 @@ python scripts/monitor.py bar --root E:\project
 - **只读**：绝不写 state.json、不改任何项目文件，纯监督
 - **容错**：state.json 损坏/缺字段的项目单独标红，不影响其他项目
 - 扫描根可配，默认 E:\project；机器上换盘符改 `--root` 即可
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：监控会卡住吗？→ 有心跳/判活机制，长任务失联会告警。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

@@ -3,8 +3,8 @@ name: ast-invariant-guard
 description: 用 AST 写「源码级防回退护栏」测试，把项目约定/安全基线锁死。适用于：约定靠自觉易回退、错误不崩溃但语义错（如配色反转）、review 肉眼看不出、或运行时难构造的场景（鉴权遗漏、响应未走统一信封、分页下限、凭据外泄、静默吞异常、fragment 内整页 rerun）。当用户说「锁死约定」「防止回退」「加护栏」「审计有没有违规」时使用。
 agent_created: true
 slug: ast-invariant-guard
-displayName: AST防回退护栏
-version: 1.0.0
+displayName: AST防回退护栏·护栏
+version: 1.0.1
 license: MIT
 ---
 
@@ -76,3 +76,11 @@ def test_invariant():
   import 提到模块顶部时最易踩；遇到就恢复函数内惰性导入。
 - **别为了「去敏/合规」把功能删没**：护栏测试里反向断言一下正常路径仍可用
   （如 `to_public` 仍返回 username/role）。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

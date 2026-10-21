@@ -3,8 +3,8 @@ name: 游戏数据洞察
 description: 网页小游戏游玩数据收集与反馈闭环 skill。自动采集玩家行为（浏览器埋点 SDK + 本地收集服务），汇总成结构化洞察报告，并生成可直接交给「开发游戏的 AI（Hy3 / WorkBuddy）」的改良指令包。触发词：收集游玩数据、生成玩家反馈报告、把数据发给开发AI、改进游戏、游戏数据洞察。
 agent_created: true
 slug: game-play-insight
-version: 1.0.0
-displayName: 游戏数据洞察
+version: 1.0.1
+displayName: 游戏数据洞察·数据分析
 ---
 
 # game-play-insight — 网页小游戏游玩数据收集与反馈闭环
@@ -95,3 +95,11 @@ python game_insight.py demo                  # 造示例数据并跑通 collect�
 ## 依赖
 - Python 3.8+（仅标准库，无需 pip 安装）
 - 浏览器端 SDK 零依赖（纯 JS，无需构建）
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

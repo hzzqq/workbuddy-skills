@@ -2,7 +2,7 @@
 slug: viz-diagram-pack
 name: 图表与绘图包
 displayName: 图表与绘图包
-version: 1.0.0
+version: 1.0.1
 license: MIT
 category: visualization
 description: |
@@ -54,3 +54,11 @@ python install_bundle.py --mirror "E:/project/skill/skills-for-cloud"   # 指定
 ## 维护约定
 - 新增/剔除成员：编辑本目录的 `manifest.json` 后重跑生成脚本，或手动同步 SKILL.md 成员表。
 - 非破坏式：绝不删除被组合的原始 skill。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

@@ -3,8 +3,8 @@ name: derived-artifact-verify-publish
 description: 生成/扫描「衍生资源」（模板文件、默认配置、注册表、清单、构建产物）时的三道护栏：默认项必须写死不能靠排序、校验必须调用真正使用它的那段代码、校验通过才准上线。适用于：往目录里新增一种模板/皮肤/主题/规则文件、按 glob/listdir 选默认项、写生成脚本（make_*.py）、出现"加了新文件之后默认行为被悄悄改了"或"校验说坏了但其实好着"。触发词：新增模板、多套皮肤、默认模板、glob 取第一个、生成脚本、资源校验、为什么默认变了。
 agent_created: true
 slug: derived-artifact-verify-publish
-displayName: 衍生资源发布校验
-version: 1.0.0
+displayName: 衍生资源发布校验·合规
+version: 1.0.1
 license: MIT
 ---
 
@@ -171,3 +171,11 @@ if os.path.exists(out) and not args.force:
 5. "什么都没改到"（hits==0 / 空 diff / 零命中）是当成功还是当失败？
 6. 有没有一条测试专门锁"默认项是谁"？（我这次是靠 `test_generate_with_selected_template`
    里那句"未知 key 要回退默认"才逮到默认被换——**加完新资源后，第一件事就是断言默认没变**。）
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

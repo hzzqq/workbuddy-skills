@@ -12,8 +12,8 @@ description: |
   本 skill 安装于用户级目录，任何项目（Go / Python / JS / Rust / 纯文档……）都可直接调用。
 agent_created: true
 slug: self-driving-dev
-version: 1.0.0
-displayName: 自驱开发循环
+version: 1.0.1
+displayName: 自驱开发循环·Agent循环
 ---
 
 # 自主驱动开发循环（Self-Driving Dev Loop）
@@ -227,3 +227,11 @@ DRY 与消除重复 · 幂等性与并发安全。每轮至少在两个轴上有
   先 `git config core.autocrlf false` 再 `git checkout -- .` 还原，避免把无关换行改动混进本轮提交。
 - 跨平台一致性：Go 项目统一用 LF（`.gitattributes` 或 `.editorconfig` 锁定），别让工具链悄悄改换行。
 - **沙箱子进程路径陷阱（重要）**：本环境 Bash 沙箱在跑 `pytest` / `node --check` 等**子进程**时，传给子进程的**绝对路径参数会报 "file or directory not found"**，但相对路径正常。对策：编排脚本里先 `cd` 到目标目录，再传相对路径参数（如 `cd root && pytest "$p/tests"`）。`py_compile` 直接由 Python 调用、不经 shell 子进程，可用绝对路径。编写 `run_tests.sh` / `verify_all.py` 等验收脚本时必须用相对路径，否则会出现"23 项单测全红"的假失败。
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。

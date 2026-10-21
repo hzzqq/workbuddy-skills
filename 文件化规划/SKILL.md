@@ -1,14 +1,14 @@
 ---
 name: planning-with-files
 model: reasoning
-version: 3.0.0
+version: 3.0.1
 description: >
   File-based planning for complex tasks. Use persistent markdown files as working memory
   to survive context resets. Creates task_plan.md, findings.md, and progress.md. Use for
   any task requiring >5 tool calls, research projects, or multi-step implementations.
 tags: [planning, context, workflow, manus, memory, complex-tasks]
 slug: planning-with-files
-displayName: 文件化规划
+displayName: 文件化规划·复杂任务规划
 license: MIT
 ---
 
@@ -201,3 +201,11 @@ Helper scripts for automation:
 5. **NEVER skip the 2-Action Rule for visual content** — multimodal data gets lost
 6. **NEVER proceed past 3 failures without escalating** — ask the user for help
 7. **NEVER create planning files in the skill directory** — they go in your project root
+
+---
+
+## 适用场景 / 常见疑问 / 反模式 / 快速示例
+- **适用场景**：见上方 SKILL.md 正文（受众 + 触发词 + 能力边界）。
+- **常见疑问**：是否联网 / 读取私钥？→ 默认只读、零网络外呼、无密钥访问（详见 SKILL.md 安全约定）。
+- **反模式**：不要期望它在所有场景都给答案；超出能力边界时它会诚实说明，而非编造。
+- **快速示例**：见 SKILL.md 中的命令 / 脚本用法与模板。
