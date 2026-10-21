@@ -26,7 +26,7 @@ tags: [组合包, bundle, quant]
 | onequant-backtest | local | OneQuant 4.0 量化交易系统 — A股本地量化平台，Windows/macOS/Linux全平台支持(Docker)。5种调用方式 | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |
 | akshare-stock | local | A股量化数据分析工具，基于AkShare库获取A股行情、财务数据、板块信息等。用于回答关于A股股票查询、行情数据、财务分析、选股等问题。 | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |
 | A股短线交易 | local | A 股日内与短线决策辅助工具，覆盖盘后诊断、标的初筛、盘中节点评估、单标的因子分析四个环节。 支持从交割单回溯每笔交易的买卖质量并输出结构化 | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |
-| 中国金融机构数据爬取与分析 | local | 中国金融机构数据爬取与分析综合 Skill v10.0.0。2334家/43大类机构名单、60+财经媒体源舆情、 A股报告/公告/研报、60 | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |
+| 中国金融机构数据爬取与分析 | local | 中国金融机构数据爬取与分析综合 Skill v11.0.0。2334家/43大类机构名单、60+财经媒体源舆情、 A股报告/公告/研报、60 | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |
 | 每日财经新闻 | local | >- | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |
 | hk-quant-advisor | local | 港股专业量化交易决策顾问 v1.0.2。模拟"交易员 + 风控官 + 绩效分析师"三重角色，基于多维度实时数据，运行精确量化策略，为港股账户 | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |
 | 投资财经日历 | local | 财经事件日历技能。查询CPI/PPI/GDP/PMI/非农/PCE等宏观数据发布时间、FOMC/MLF/LPR等央行决议、财报/IPO/解禁 | 本地自研：从 skills-for-cloud 镜像拷贝 / 推 GitHub 后复制 |

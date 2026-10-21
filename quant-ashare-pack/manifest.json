@@ -55,7 +55,7 @@
     {
       "dir": "cnfinancialscraper__skillhub",
       "displayName": "中国金融机构数据爬取与分析",
-      "description": "中国金融机构数据爬取与分析综合 Skill v10.0.0。2334家/43大类机构名单、60+财经媒体源舆情、 A股报告/公告/研报、60",
+      "description": "中国金融机构数据爬取与分析综合 Skill v11.0.0。2334家/43大类机构名单、60+财经媒体源舆情、 A股报告/公告/研报、60",
       "source": "local",
       "namespace": "",
       "slug": "cnfinancialscraper__skillhub",
@@ -223,14 +223,14 @@
       "mirror_path": "E:/project/skill/skills-for-cloud\\牧羊人指标"
     },
     {
-      "dir": "futures-combo",
+      "dir": "期货组合分析",
       "displayName": "futures-combo",
       "description": "商品期货组合分析专家 —— 专为老板的 6 个实盘品种（玻璃FG / 纸浆SP / 纯碱SA / 鸡蛋JD / 白糖SR / 乙二醇EG）定",
       "source": "local",
       "namespace": "",
-      "slug": "futures-combo",
+      "slug": "期货组合分析",
       "found": true,
-      "mirror_path": "E:/project/skill/skills-for-cloud\\futures-combo"
+      "mirror_path": "E:/project/skill/skills-for-cloud\\期货组合分析"
     }
   ]
 }

@@ -5,7 +5,7 @@
     {
       "dir": "ai-photo-restyler__skillhub",
       "displayName": "ai-photo-restyler",
-      "description": "把一张照片转成漫画风、动漫风、卡通、水彩、手绘、黏土或 3D 角色画风，同时保住人物、宠物或商品的辨识度。这个 AI 照片转绘、照片转漫画工",
+      "description": "把一张照片转成漫画风、动漫风、卡通化、水彩、手绘、黏土或 3D 角色画风，同时保住人物、宠物或商品的辨识度。这个 AI 照片转绘、照片转漫画",
       "source": "local",
       "namespace": "",
       "slug": "ai-photo-restyler__skillhub",
@@ -25,7 +25,7 @@
     {
       "dir": "gpt-image-2-5-studio__skillhub",
       "displayName": "gpt-image-2-5-studio",
-      "description": "GPT Image 2.5生图用 GPT-Image-2.5 和 ChatGPT Images 2.5 出一张图。GPT Image 2.5",
+      "description": "GPT Image 2.5生图是一款 AI 工具，用 GPT-Image-2.5 和 ChatGPT Images 2.5 出一张图。GPT",
       "source": "local",
       "namespace": "",
       "slug": "gpt-image-2-5-studio__skillhub",
@@ -55,7 +55,7 @@
     {
       "dir": "whiteboard-animation-maker__skillhub",
       "displayName": "whiteboard-animation-maker",
-      "description": "把一个概念、一份写好的口播稿，或一条要对标的社媒视频，变成 1080×1920 竖屏白板手绘讲解片（白底黑线）。这个白板动画制作工具支持汉字",
+      "description": "用 AI 把一个概念、一份写好的口播稿，或一条要对标的社媒视频，变成 1080×1920 竖屏白板手绘讲解片（白底黑线）。这个白板动画制作工",
       "source": "local",
       "namespace": "",
       "slug": "whiteboard-animation-maker__skillhub",
@@ -85,7 +85,7 @@
     {
       "dir": "short-drama-score-pack__skillhub",
       "displayName": "short-drama-score-pack",
-      "description": "为竖屏短剧一次做出8到15首原创短剧配乐。这个短剧BGM和短剧配乐工作室会按紧张、恋爱、喜感和虐心写出可循环的情绪床，音乐归你所有、可直接商",
+      "description": "借助 AI 为竖屏短剧一次做出8到15首原创短剧配乐。这个短剧BGM和短剧配乐工作室会按紧张、恋爱、喜感和虐心写出可循环的情绪床，音乐归你所",
       "source": "local",
       "namespace": "",
       "slug": "short-drama-score-pack__skillhub",
