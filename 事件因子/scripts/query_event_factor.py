@@ -36,6 +36,10 @@ def main():
     p1 = sub.add_parser("symbol", help="查询单个标的事件因子")
     p1.add_argument("symbol")
     p1.add_argument("--model", default="ev")
+    p1.add_argument("--voice-user", default=None,
+                     help="启用第五源：仅读取该登录用户自己的语音事件（隐私闸门）")
+    p1.add_argument("--include-macro", action="store_true",
+                     help="附加全球宏观上下文（联网取真实数据，不参与评分）")
 
     p2 = sub.add_parser("longlist", help="事件驱动看多榜")
     p2.add_argument("--top-n", type=int, default=20)
@@ -45,7 +49,11 @@ def main():
     ef = _load()
 
     if args.cmd == "symbol":
-        out = ef.get_event_factor(args.symbol, model=args.model)
+        out = ef.get_event_factor(
+            args.symbol, model=args.model,
+            voice_user=args.voice_user,
+            include_macro=args.include_macro,
+        )
     else:
         out = ef.event_driven_long_list(top_n=args.top_n, model=args.model)
 

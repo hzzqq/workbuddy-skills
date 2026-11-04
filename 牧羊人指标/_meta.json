@@ -1,0 +1,8 @@
+{
+  "ownerId": "788241",
+  "slug": "shepherd-sentiment",
+  "version": "1.0.1",
+  "publishedAt": null,
+  "status": "not_published",
+  "note": "包与上架物料已就绪（StockSignal build/ 下对应 zip + .skill.json），尚未上传平台（需登录态）。上传时首次发布即用该版本号。"
+}

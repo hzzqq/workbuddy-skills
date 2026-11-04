@@ -1,6 +1,9 @@
 {
   "ownerId": "788241",
-  "publishedAt": 1791722443185,
   "slug": "event-factor",
-  "version": "1.0.0"
+  "version": "1.0.2",
+  "publishedAt": 1791722443185,
+  "skillId": 276840,
+  "versionId": 488304,
+  "lastPublishStatus": "ok:true, reviewStatus=pending, securityScanStatus=pending"
 }

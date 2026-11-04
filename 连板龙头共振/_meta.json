@@ -1,6 +1,8 @@
 {
   "ownerId": "788241",
-  "publishedAt": 1791652546767,
   "slug": "ladder-resonance",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "publishedAt": 1791652546767,
+  "pendingVersion": "1.1.0",
+  "pendingNote": "本地已备好 1.1.0（包/物料/本地安装态就绪），尚未上传平台；上传时须以 slug=ladder-resonance 更新 1.0.0，不得新建同名 skill。"
 }
