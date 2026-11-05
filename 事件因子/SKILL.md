@@ -2,7 +2,7 @@
 name: 事件因子
 displayName: 事件因子·A股信号
 slug: event-factor
-version: 1.0.2
+version: 1.0.3
 description: "事件因子查询：调用 StockSignal modules.event_factor，从五个真实源（P1 EV 模型 / 东方财富新闻情感 / 龙虎榜 / 本地事件主表 / 用户语音转写事件）兜底取真实信号，可选附加全球宏观上下文，判断个股看多/看空与百分位。取不到即 available=False，绝不编造或默认 0；支持单标查询与事件驱动看多榜。"
 agent_created: true
 ---

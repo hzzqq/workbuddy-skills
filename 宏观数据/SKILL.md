@@ -2,7 +2,7 @@
 name: 宏观数据
 displayName: 宏观数据·全球风险评分
 slug: macro-data
-version: 1.1.0
+version: 1.1.1
 description: "宏观指标取数：调用 StockSignal modules.macro_data，覆盖国内 PMI/CPI/PPI/GDP/M2/LPR 与全球 12 项指标，合成 0-100 全球宏观评分。取不到返回 None 绝不填合成值；规则解读非 AI 洞见，失败即诚实降级。"
 agent_created: true
 ---
