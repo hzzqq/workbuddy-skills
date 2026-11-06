@@ -51,7 +51,7 @@ def analyze_project(proj, owners_cache=None):
     """
     owners_cache = owners_cache if owners_cache is not None else {}
     rows = []
-    for port in proj.host_ports:
+    for port in proj.effective_ports:
         if port not in owners_cache:
             owners_cache[port] = allocator.port_owners(port)
         owners = owners_cache[port]
@@ -70,6 +70,7 @@ def analyze_project(proj, owners_cache=None):
             "state": state,
             "note": note,
             "declared_in": sorted({d.source for d in proj.decls if d.port == port})[:3],
+            "effective": bool(proj.env_ports),
         })
     for port in proj.container_ports:
         rows.append({
@@ -85,7 +86,7 @@ def find_static_conflicts(projects) -> dict:
     """两个不同项目声明了同一个 **宿主机** 端口 → 静态撞车（还没启动就已经埋雷）"""
     by_port = {}
     for p in projects:
-        for port in p.host_ports:
+        for port in p.effective_ports:
             by_port.setdefault(port, []).append(p)
     return {port: ps for port, ps in by_port.items() if len(ps) > 1}
 
@@ -168,7 +169,7 @@ def report_doctor(projects, root, as_json=False) -> str:
         for c in live_conflicts:
             try:
                 proj = next(p for p in projects if p.name == c["project"])
-                exclude = set(proj.host_ports) | reserved | suggested
+                exclude = set(proj.effective_ports) | reserved | suggested
                 free = allocator.allocate_port(pool=(5100, 5999), exclude=exclude)
                 suggested.add(free)
                 lines.append("  · %s 的 %d 被占 → alloc \"%s\" --prefer %d --write"
@@ -235,7 +236,7 @@ def cmd_alloc(args) -> int:
     registry.gc_stale()
     exclude = registry.active_ports()
     proj = scanner.scan_project(path)
-    exclude |= set(proj.host_ports)  # 别把项目自己声明的宿主机端口发出去（除非显式 prefer）
+    exclude |= set(proj.effective_ports)  # 别把项目自己会用的端口发出去（除非显式 prefer）
     try:
         port = allocator.allocate_port(pool=(lo, hi), prefer=args.prefer, exclude=exclude)
     except RuntimeError as e:
@@ -311,7 +312,7 @@ def cmd_prelaunch(args) -> int:
     registry.gc_stale()
     exclude = registry.active_ports()
     proj = scanner.scan_project(path)
-    exclude |= set(proj.host_ports)
+    exclude |= set(proj.effective_ports)
     port = allocator.allocate_port(pool=(lo, hi), prefer=args.prefer, exclude=exclude)
     allocator.write_port_env(path, port)
     registry.register(port, path, os.path.basename(path), reason="prelaunch")

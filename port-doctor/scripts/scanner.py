@@ -66,6 +66,12 @@ SKIP_EXT = {".min.js", ".map", ".lock", ".log", ".pyc"}
 # 单文件最大扫描体积（防止误扫巨型二进制）
 MAX_FILE_BYTES = 2 * 1024 * 1024
 
+# port-doctor 生成的机器本地端口文件（运行时真正生效的端口来源）
+ENV_FILE_NAME = ".port.env"
+
+# port-doctor 生成的机器本地端口文件（运行时真正生效的端口来源）
+ENV_FILE_NAME = ".port.env"
+
 
 @dataclass
 class PortDecl:
@@ -88,6 +94,7 @@ class ProjectPorts:
     name: str
     path: str
     decls: list = field(default_factory=list)
+    env_ports: dict = field(default_factory=dict)   # .port.env 里的 键->端口
 
     @property
     def ports(self) -> list:
@@ -96,12 +103,24 @@ class ProjectPorts:
 
     @property
     def host_ports(self) -> list:
-        """真正会占宿主机端口的（容器内映射排除，避免误报）"""
-        return sorted({d.port for d in self.decls if d.scope != "container"})
+        """代码里声明的、真正会占宿主机端口的（容器内映射与 .port.env 排除，避免误报）"""
+        return sorted({d.port for d in self.decls
+                       if d.scope != "container" and d.kind != "port_env"})
 
     @property
     def container_ports(self) -> list:
         return sorted({d.port for d in self.decls if d.scope == "container"})
+
+    @property
+    def effective_ports(self) -> list:
+        """**运行时真正会用的端口**：有 .port.env 就以它为准，否则退回声明端口。
+
+        这是 v1.0.1 的关键改进：项目把端口改成由 .port.env 注入后，
+        冲突判定必须看"生效端口"，否则会一直报老端口撞车（不诚实）。
+        """
+        if self.env_ports:
+            return sorted(set(self.env_ports.values()))
+        return self.host_ports
 
     def to_dict(self) -> dict:
         return {
@@ -274,13 +293,45 @@ def _walk_dirs(root: Path, max_depth: int):
                 stack.append((d, depth + 1))
 
 
+def read_port_env(project_path) -> dict:
+    """读取项目根的 .port.env（port-doctor 生成的机器本地端口文件）。
+
+    解析规则与项目内 port_env.py 一致：跳过空行与 # 注释，取 KEY=VALUE，值必须是纯数字。
+    """
+    path = Path(project_path) / ".port.env"
+    out = {}
+    try:
+        raw = path.read_text(encoding="utf-8")
+    except OSError:
+        return out
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        k, v = k.strip(), v.strip()
+        if k and v.isdigit():
+            out[k] = int(v)
+    return out
+
+
 def scan_project(project_path) -> ProjectPorts:
     """扫描单个项目里所有文件的端口声明"""
     project_path = Path(project_path)
     proj = ProjectPorts(name=project_path.name, path=str(project_path))
     seen = set()
+    # .port.env 优先：它代表运行时真正生效的端口
+    env_ports = read_port_env(project_path)
+    proj.env_ports = env_ports
+    for key, port in sorted(env_ports.items()):
+        proj.decls.append(PortDecl(port=port, kind="port_env", source=".port.env",
+                                   line=0, evidence="%s=%d" % (key, port),
+                                   confidence="high"))
     for cur, dirs, files in _walk_dirs(project_path, 2):
         for fname in sorted(files):
+            # .port.env 由 read_port_env() 专门处理，不走通用规则（避免双计数）
+            if fname == ENV_FILE_NAME:
+                continue
             ext = os.path.splitext(fname)[1].lower()
             if ext not in SCAN_EXT and fname not in (".env", "Procfile", "Dockerfile"):
                 continue

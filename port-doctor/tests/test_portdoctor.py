@@ -285,3 +285,113 @@ def test_cli_prelaunch_prints_port(tmp_path):
                  env={"PORTDOCTOR_REGISTRY": str(tmp_path / "reg3.json")})
     assert r.returncode == 0
     assert r.stdout.strip().startswith("PORT=")
+
+
+# ==========================================================================
+# v1.0.1：.port.env 生效端口优先
+# ==========================================================================
+def test_read_port_env_parses_keys(tmp_path):
+    (tmp_path / ".port.env").write_text(
+        "# 由 port-doctor 自动生成\nPORT=5100\nFASTAPI_PORT=5109\n", encoding="utf-8")
+    env = scanner.read_port_env(tmp_path)
+    assert env == {"PORT": 5100, "FASTAPI_PORT": 5109}
+
+
+def test_read_port_env_missing_file(tmp_path):
+    assert scanner.read_port_env(tmp_path) == {}
+
+
+def test_read_port_env_ignores_invalid(tmp_path):
+    (tmp_path / ".port.env").write_text("PORT=abc\nBAD=\nX=1\n", encoding="utf-8")
+    env = scanner.read_port_env(tmp_path)
+    assert env == {"X": 1}
+
+
+def test_effective_ports_prefers_port_env(tmp_path):
+    (tmp_path / "package.json").write_text(
+        json.dumps({"scripts": {"dev": "next dev"}}), encoding="utf-8")
+    (tmp_path / ".port.env").write_text("PORT=5100\n", encoding="utf-8")
+    proj = scanner.scan_project(tmp_path)
+    assert proj.host_ports == [3000]          # 声明端口仍在
+    assert proj.effective_ports == [5100]     # 生效端口以 .port.env 为准
+
+
+def test_effective_ports_falls_back_without_env_file(tmp_path):
+    (tmp_path / "package.json").write_text(
+        json.dumps({"scripts": {"dev": "next dev"}}), encoding="utf-8")
+    proj = scanner.scan_project(tmp_path)
+    assert proj.effective_ports == [3000]
+
+
+def test_static_conflict_uses_effective_ports(tmp_path):
+    """两个项目声明同一端口，但各自 .port.env 已错开 → 不算静态撞车"""
+    a = tmp_path / "a"; a.mkdir()
+    b = tmp_path / "b"; b.mkdir()
+    for d, port in ((a, 5100), (b, 5101)):
+        (d / "package.json").write_text(
+            json.dumps({"scripts": {"dev": "next dev"}}), encoding="utf-8")
+        (d / ".port.env").write_text("PORT=%d\n" % port, encoding="utf-8")
+    projects = scanner.scan_root(tmp_path)
+    conflicts = portctl.find_static_conflicts(projects)
+    assert conflicts == {}
+    # 去掉 .port.env 后，同一端口就重新变成撞车
+    for d in (a, b):
+        os.remove(d / ".port.env")
+    projects = scanner.scan_root(tmp_path)
+    conflicts = portctl.find_static_conflicts(projects)
+    assert 3000 in conflicts
+
+
+# ==========================================================================
+# v1.0.1：.port.env 生效端口优先
+# ==========================================================================
+def test_read_port_env_parses_keys(tmp_path):
+    (tmp_path / ".port.env").write_text(
+        "# 由 port-doctor 自动生成\nPORT=5100\nFASTAPI_PORT=5109\n", encoding="utf-8")
+    env = scanner.read_port_env(tmp_path)
+    assert env == {"PORT": 5100, "FASTAPI_PORT": 5109}
+
+
+def test_read_port_env_missing_file(tmp_path):
+    assert scanner.read_port_env(tmp_path) == {}
+
+
+def test_read_port_env_ignores_invalid(tmp_path):
+    (tmp_path / ".port.env").write_text("PORT=abc\nBAD=\nX=1\n", encoding="utf-8")
+    env = scanner.read_port_env(tmp_path)
+    assert env == {"X": 1}
+
+
+def test_effective_ports_prefers_port_env(tmp_path):
+    (tmp_path / "package.json").write_text(
+        json.dumps({"scripts": {"dev": "next dev"}}), encoding="utf-8")
+    (tmp_path / ".port.env").write_text("PORT=5100\n", encoding="utf-8")
+    proj = scanner.scan_project(tmp_path)
+    assert proj.host_ports == [3000]          # 声明端口仍在
+    assert proj.effective_ports == [5100]     # 生效端口以 .port.env 为准
+
+
+def test_effective_ports_falls_back_without_env_file(tmp_path):
+    (tmp_path / "package.json").write_text(
+        json.dumps({"scripts": {"dev": "next dev"}}), encoding="utf-8")
+    proj = scanner.scan_project(tmp_path)
+    assert proj.effective_ports == [3000]
+
+
+def test_static_conflict_uses_effective_ports(tmp_path):
+    """两个项目声明同一端口，但各自 .port.env 已错开 → 不算静态撞车"""
+    a = tmp_path / "a"; a.mkdir()
+    b = tmp_path / "b"; b.mkdir()
+    for d, port in ((a, 5100), (b, 5101)):
+        (d / "package.json").write_text(
+            json.dumps({"scripts": {"dev": "next dev"}}), encoding="utf-8")
+        (d / ".port.env").write_text("PORT=%d\n" % port, encoding="utf-8")
+    projects = scanner.scan_root(tmp_path)
+    conflicts = portctl.find_static_conflicts(projects)
+    assert conflicts == {}
+    # 去掉 .port.env 后，同一端口就重新变成撞车
+    for d in (a, b):
+        os.remove(d / ".port.env")
+    projects = scanner.scan_root(tmp_path)
+    conflicts = portctl.find_static_conflicts(projects)
+    assert 3000 in conflicts

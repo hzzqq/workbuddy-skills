@@ -2,7 +2,7 @@
 name: 端口医生
 displayName: 端口医生·本地演示防撞
 slug: port-doctor
-version: 1.0.0
+version: 1.0.1
 description: "本地项目演示端口相冲（端口冲突）体检与自动分配：扫描项目目录下所有项目的端口声明（package.json 脚本 / vite.config / app.run(port=) / uvicorn / docker-compose / .env / 启动 bat·ps1），与操作系统实际监听端口交叉比对，定位「谁占了谁」并给出可直接用的空闲端口；从托管端口池自动分配端口、写 .port.env、维护全局登记表（项目/端口/PID/时间）、回收僵尸占用；提供 prelaunch 预检钩子与 kill 占用者。典型场景：演示网址打不开、串到别的项目、端口被上一个进程占着、Flask 5000 与 Next 3000 撞车、多项目同时起服务必须错开端口。触发词：\"端口冲突\"\"端口相冲\"\"端口被占\"\"port conflict\"\"地址打不开\"\"串项目了\"\"分配端口\"\"换端口\"\"本地演示网址\"。"
 agent_created: true
 license: MIT
@@ -65,6 +65,19 @@ python scripts/portctl.py release E:\project\project4
 `django/fastapi/uvicorn/gunicorn` 8000、`streamlit` 8501、`gradio` 7860、`jupyter` 8888 等。
 
 **每条声明都带来源文件 + 行号 + 命中片段**，结论可复核，不搞「黑盒猜测」。
+
+### 1.1 生效端口优先（v1.0.1 起）
+
+若项目根有 `.port.env`（port-doctor 生成的机器本地端口文件），**运行时真正用的端口以它为准**：
+
+```
+# .port.env
+PORT=5100
+FASTAPI_PORT=5109
+```
+
+扫描器会把它识别成 `kind=port_env` 的声明，并把冲突判定切到「生效端口」。
+这样「项目已用 .port.env 错开端口」之后，体检报告不会继续拿老端口（5050/8000…）报撞车 —— **报告必须说实话**。
 
 ### 2. 「端口被占」怎么判定
 
